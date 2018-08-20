@@ -1,0 +1,85 @@
+for bin in  list  tree; do gdb -q "$bin" < "$bin"_gdb; done
+Reading symbols from list...done.
+(gdb) Breakpoint 1 at 0x7b1: file list.c, line 35.
+(gdb) Starting program: /home/ivan/gdb/examples/list 
+
+Breakpoint 1, main () at list.c:36
+36		return 0;
+(gdb) $1 = 93824994337376
+(gdb) [0] <0x555555756260> struct ilist {data = 1, next = 0x555555756280}
+[1] <0x555555756280> struct ilist {data = 2, next = 0x5555557562a0}
+[2] <0x5555557562a0> struct ilist {data = 3, next = 0x5555557562c0}
+[3] <0x5555557562c0> struct ilist {data = 4, next = 0x5555557562e0}
+[4] <0x5555557562e0> struct ilist {data = 5, next = 0x555555756300}
+[5] <0x555555756300> struct ilist {data = 6, next = 0x555555756320}
+[6] <0x555555756320> struct ilist {data = 7, next = 0x555555756340}
+[7] <0x555555756340> struct ilist {data = 8, next = 0x555555756360}
+[8] <0x555555756360> struct ilist {data = 9, next = 0x555555756380}
+[9] <0x555555756380> struct ilist {data = 0, next = 0x0}
+(gdb) [0] <0x555555756260> struct ilist {data = 1, next = 0x555555756280}
+[1] <0x555555756280> struct ilist {data = 2, next = 0x5555557562a0}
+[2] <0x5555557562a0> struct ilist {data = 3, next = 0x5555557562c0}
+[3] <0x5555557562c0> struct ilist {data = 4, next = 0x5555557562e0}
+[4] <0x5555557562e0> struct ilist {data = 5, next = 0x555555756300}
+[5] <0x555555756300> struct ilist {data = 6, next = 0x555555756320}
+[6] <0x555555756320> struct ilist {data = 7, next = 0x555555756340}
+[7] <0x555555756340> struct ilist {data = 8, next = 0x555555756360}
+[8] <0x555555756360> struct ilist {data = 9, next = 0x555555756380}
+[9] <0x555555756380> struct ilist {data = 0, next = 0x0}
+(gdb) [0] <0x555555756260> struct ilist {data = 1, next = 0x555555756280}
+[1] <0x555555756280> struct ilist {data = 2, next = 0x5555557562a0}
+[2] <0x5555557562a0> struct ilist {data = 3, next = 0x5555557562c0}
+[3] <0x5555557562c0> struct ilist {data = 4, next = 0x5555557562e0}
+[4] <0x5555557562e0> struct ilist {data = 5, next = 0x555555756300}
+[5] <0x555555756300> struct ilist {data = 6, next = 0x555555756320}
+[6] <0x555555756320> struct ilist {data = 7, next = 0x555555756340}
+[7] <0x555555756340> struct ilist {data = 8, next = 0x555555756360}
+[8] <0x555555756360> struct ilist {data = 9, next = 0x555555756380}
+[9] <0x555555756380> struct ilist {data = 0, next = 0x0}
+(gdb) A debugging session is active.
+
+	Inferior 1 [process 18720] will be killed.
+
+Quit anyway? (y or n) [answered Y; input not from terminal]
+Reading symbols from tree...done.
+(gdb) Breakpoint 1 at 0x841: file tree.c, line 48.
+(gdb) Starting program: /home/ivan/gdb/examples/tree 
+
+Breakpoint 1, main () at tree.c:49
+49		return 0;
+(gdb) $1 = 93824994337376
+(gdb) [0] <0x555555756260> struct btree {data = 1, left = 0x555555756300, right = 0x555555756280}
+[1] <0x555555756300> struct btree {data = 0, left = 0x0, right = 0x0}
+[2] <0x555555756280> struct btree {data = 3, left = 0x555555756380, right = 0x5555557562a0}
+[3] <0x555555756380> struct btree {data = 2, left = 0x0, right = 0x0}
+[4] <0x5555557562a0> struct btree {data = 5, left = 0x555555756360, right = 0x5555557562c0}
+[5] <0x555555756360> struct btree {data = 4, left = 0x0, right = 0x0}
+[6] <0x5555557562c0> struct btree {data = 7, left = 0x555555756340, right = 0x5555557562e0}
+[7] <0x555555756340> struct btree {data = 6, left = 0x0, right = 0x0}
+[8] <0x5555557562e0> struct btree {data = 9, left = 0x555555756320, right = 0x0}
+[9] <0x555555756320> struct btree {data = 8, left = 0x0, right = 0x0}
+(gdb) [0] <0x555555756260> struct btree {data = 1, left = 0x555555756300, right = 0x555555756280}
+[1] <0x555555756300> struct btree {data = 0, left = 0x0, right = 0x0}
+[2] <0x555555756280> struct btree {data = 3, left = 0x555555756380, right = 0x5555557562a0}
+[3] <0x555555756380> struct btree {data = 2, left = 0x0, right = 0x0}
+[4] <0x5555557562a0> struct btree {data = 5, left = 0x555555756360, right = 0x5555557562c0}
+[5] <0x555555756360> struct btree {data = 4, left = 0x0, right = 0x0}
+[6] <0x5555557562c0> struct btree {data = 7, left = 0x555555756340, right = 0x5555557562e0}
+[7] <0x555555756340> struct btree {data = 6, left = 0x0, right = 0x0}
+[8] <0x5555557562e0> struct btree {data = 9, left = 0x555555756320, right = 0x0}
+[9] <0x555555756320> struct btree {data = 8, left = 0x0, right = 0x0}
+(gdb) [0] <0x555555756260> struct btree {data = 1, left = 0x555555756300, right = 0x555555756280}
+[1] <0x555555756300> struct btree {data = 0, left = 0x0, right = 0x0}
+[2] <0x555555756280> struct btree {data = 3, left = 0x555555756380, right = 0x5555557562a0}
+[3] <0x555555756380> struct btree {data = 2, left = 0x0, right = 0x0}
+[4] <0x5555557562a0> struct btree {data = 5, left = 0x555555756360, right = 0x5555557562c0}
+[5] <0x555555756360> struct btree {data = 4, left = 0x0, right = 0x0}
+[6] <0x5555557562c0> struct btree {data = 7, left = 0x555555756340, right = 0x5555557562e0}
+[7] <0x555555756340> struct btree {data = 6, left = 0x0, right = 0x0}
+[8] <0x5555557562e0> struct btree {data = 9, left = 0x555555756320, right = 0x0}
+[9] <0x555555756320> struct btree {data = 8, left = 0x0, right = 0x0}
+(gdb) A debugging session is active.
+
+	Inferior 1 [process 18726] will be killed.
+
+Quit anyway? (y or n) [answered Y; input not from terminal]

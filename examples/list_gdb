@@ -1,0 +1,8 @@
+b 35
+r
+p (unsigned long)head
+plist head next
+plist *head next
+plist $1 "struct ilist" next
+q
+y

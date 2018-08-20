@@ -1,0 +1,8 @@
+b 48
+run
+p (unsigned long)tree
+pbtree tree "left" "right"
+pbtree *tree "left" "right"
+pbtree $1 "struct btree" left right
+q
+y
